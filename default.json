@@ -21,6 +21,12 @@
                 "hermit"
             ],
             "automerge": true
+        },
+        {
+            "matchDepTypes": [
+                "devDependencies"
+            ],
+            "automerge": true
         }
     ],
     "lockFileMaintenance": {
