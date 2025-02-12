@@ -1,0 +1,41 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended",
+        ":ignoreUnstable"
+    ],
+    "packageRules": [
+        {
+            "matchManagers": [
+                "terraform"
+            ],
+            "matchDepTypes": [
+                "provider"
+            ],
+            "enabled": false
+        },
+        {
+            "matchDatasources": [
+                "github-runners",
+                "github-actions",
+                "hermit"
+            ],
+            "automerge": true
+        }
+    ],
+    "lockFileMaintenance": {
+        "enabled": true,
+        "automerge": true
+    },
+    "prConcurrentLimit": 1,
+    "prHourlyLimit": 6,
+    "vulnerabilityAlerts": {
+        "labels": [
+            "security"
+        ],
+        "schedule": [
+            "before 8am"
+        ],
+        "prConcurrentLimit": 3
+    }
+}
