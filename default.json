@@ -6,6 +6,13 @@
     ],
     "packageRules": [
         {
+            "matchConfidence": [
+                "low",
+                "neutral"
+            ],
+            "enabled": false
+        },
+        {
             "matchManagers": [
                 "terraform"
             ],
@@ -33,7 +40,7 @@
         "enabled": true,
         "automerge": true
     },
-    "prConcurrentLimit": 1,
+    "prConcurrentLimit": 3,
     "prHourlyLimit": 6,
     "vulnerabilityAlerts": {
         "labels": [
