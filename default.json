@@ -6,11 +6,29 @@
     ],
     "packageRules": [
         {
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
             "matchConfidence": [
-                "low",
+                "very high",
+                "high"
+            ],
+            "automerge": true
+        },
+        {
+            "matchConfidence": [
+                "low"
+            ],
+            "dependencyDashboardApproval": true,
+            "commitMessagePrefix": "[LOW] "
+        },
+        {
+            "matchConfidence": [
                 "neutral"
             ],
-            "enabled": false
+            "dependencyDashboardApproval": true,
+            "commitMessagePrefix": "[NEUTRAL] "
         },
         {
             "matchManagers": [
