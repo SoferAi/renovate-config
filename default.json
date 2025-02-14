@@ -6,31 +6,6 @@
     ],
     "packageRules": [
         {
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
-            ],
-            "matchConfidence": [
-                "very high",
-                "high"
-            ],
-            "automerge": true
-        },
-        {
-            "matchConfidence": [
-                "low"
-            ],
-            "dependencyDashboardApproval": true,
-            "commitMessagePrefix": "[LOW] "
-        },
-        {
-            "matchConfidence": [
-                "neutral"
-            ],
-            "dependencyDashboardApproval": true,
-            "commitMessagePrefix": "[NEUTRAL] "
-        },
-        {
             "matchManagers": [
                 "terraform"
             ],
@@ -48,6 +23,10 @@
             "automerge": true
         },
         {
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
             "matchDepTypes": [
                 "devDependencies"
             ],
