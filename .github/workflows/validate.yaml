@@ -17,5 +17,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3.2.0
       - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: '**/.github/workflows/*.yml'
       - run: npx --package renovate -c 'renovate-config-validator'
       - run: npx --package renovate -c 'renovate-config-validator default.json'
