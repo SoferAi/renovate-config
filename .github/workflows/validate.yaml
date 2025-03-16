@@ -1,0 +1,21 @@
+name: renovate-config
+
+"on":
+  push:
+    paths:
+      - 'default.json'
+    branches:
+      - main
+  pull_request:
+    paths:
+      - 'default.json'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v3.2.0
+      - uses: actions/setup-node@v3
+      - run: npx --package renovate -c 'renovate-config-validator'
+      - run: npx --package renovate -c 'renovate-config-validator default.json'
