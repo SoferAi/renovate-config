@@ -1,9 +1,8 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
-        "config:recommended",
-        ":ignoreUnstable",
-        "helpers:pinGitHubActionDigests"
+        "config:best-practices",
+        ":ignoreUnstable"
     ],
     "packageRules": [
         {
@@ -18,8 +17,13 @@
         {
             "matchDatasources": [
                 "github-runners",
-                "github-actions",
                 "hermit"
+            ],
+            "automerge": true
+        },
+        {
+            "matchManagers": [
+                "github-actions"
             ],
             "automerge": true
         },
