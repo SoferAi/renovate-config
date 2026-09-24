@@ -44,6 +44,7 @@
     },
     "prConcurrentLimit": 3,
     "prHourlyLimit": 6,
+    "osvVulnerabilityAlerts": true,
     "vulnerabilityAlerts": {
         "labels": [
             "security"
